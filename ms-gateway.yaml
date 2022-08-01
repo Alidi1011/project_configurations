@@ -1,0 +1,53 @@
+server:
+  port: 8077
+spring:
+  application:
+    name: ms-gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lowerCaseServiceId: true
+      routes:
+        ## CUSTOMER SERVICE
+        - id: customer-service
+          uri: lb://ms-customer
+          predicates:
+            - Path=/customers/**
+        ## ACCOUNT SERVICE
+        - id: account-service
+          uri: lb://ms-account
+          predicates:
+            - Path=/accounts/**
+
+        ## CREDIT SERVICE
+        - id: credit-service
+          uri: lb://ms-credits
+          predicates:
+            - Path=/credits/**
+
+        ## CREDIT CARDS SERVICE
+        - id: credit-cards-service
+          uri: lb://ms-credit-cards
+          predicates:
+            - Path=/credit-cards/**
+
+        ## TRANSACTIONS SERVICE
+        - id: transaction-service
+          uri: lb://ms-transactions
+          predicates:
+            - Path=/transactions/**
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    region: default
+    registryFetchIntervalSeconds: 5
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
