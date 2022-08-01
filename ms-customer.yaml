@@ -14,4 +14,10 @@ eureka:
   instance:
     hostname: localhost
 owner:
-  name: Alisson
+  name: Diane
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
