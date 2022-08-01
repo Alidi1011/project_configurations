@@ -1,0 +1,17 @@
+server:
+  port: 9082
+spring:
+  application:
+    name: ms-customer
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    region: default
+    registryFetchIntervalSeconds: 5
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    hostname: localhost
+owner:
+  name: Alisson
