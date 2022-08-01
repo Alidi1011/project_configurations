@@ -20,6 +20,7 @@ spring:
           uri: lb://ms-account
           predicates:
             - Path=/accounts/**
+            - Path=/account-configuration/**
 
         ## CREDIT SERVICE
         - id: credit-service
