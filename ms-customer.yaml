@@ -1,8 +1,3 @@
-server:
-  port: 9082
-spring:
-  application:
-    name: ms-customer
 eureka:
   client:
     register-with-eureka: true
@@ -11,6 +6,17 @@ eureka:
     registryFetchIntervalSeconds: 5
     serviceUrl:
       defaultZone: http://ms-eureka-server:8761/eureka/
+server:
+  port: 9082
+spring:
+  application:
+    name: ms-customer
+  cloud:
+    config:
+      name: ms-customer
+      discovery:
+        enabled: true
+        service-id: ms-config-server
 owner:
   name: Diane
 
