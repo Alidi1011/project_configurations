@@ -10,7 +10,7 @@ eureka:
     region: default
     registryFetchIntervalSeconds: 5
     serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: http://ms-eureka-server:8761/eureka/
   instance:
     hostname: localhost
 owner:
