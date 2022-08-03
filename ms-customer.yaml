@@ -1,11 +1,3 @@
-eureka:
-  client:
-    register-with-eureka: true
-    fetch-registry: true
-    region: default
-    registryFetchIntervalSeconds: 5
-    serviceUrl:
-      defaultZone: http://ms-eureka-server:8761/eureka/
 server:
   port: 9082
 spring:
@@ -17,6 +9,14 @@ spring:
       discovery:
         enabled: true
         service-id: ms-config-server
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    region: default
+    registryFetchIntervalSeconds: 5
+    serviceUrl:
+      defaultZone: http://ms-eureka-server:8761/eureka/
 owner:
   name: Diane
 
