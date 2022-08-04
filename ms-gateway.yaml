@@ -4,6 +4,11 @@ spring:
   application:
     name: ms-gateway
   cloud:
+    config:
+      name: ms-gateway
+      discovery:
+        enabled: true
+        service-id: ms-config-server
     gateway:
       discovery:
         locator:
@@ -46,7 +51,7 @@ eureka:
     region: default
     registryFetchIntervalSeconds: 5
     serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: http://ms-eureka-server:8761/eureka/
 management:
   endpoints:
     web:
