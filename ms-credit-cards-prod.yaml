@@ -1,11 +1,11 @@
 server:
-  port: 9086
+  port: 9084
 spring:
   application:
-    name: ms-transactions
+    name: ms-credit-cards
   cloud:
     config:
-      name: ms-transactions
+      name: ms-credit-cards
       discovery:
         enabled: true
         service-id: ms-config-server
@@ -14,10 +14,7 @@ eureka:
     register-with-eureka: true
     fetch-registry: true
     service-url:
-      defaultZone: http://localhost:8761/eureka/
-  instance:
-    hostname: localhost
-
+      defaultZone: http://ms-eureka-server:8761/eureka/
 management:
   endpoints:
     web:
