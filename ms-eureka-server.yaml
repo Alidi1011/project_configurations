@@ -10,9 +10,9 @@ spring:
 eureka:
   renewalPercenThreshold: 0.85
   instance:
-    hostname: localhost
+    hostname: bootcamp-ms-eureka-server-g3.azurewebsites.net
   client:
     serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: https://bootcamp-ms-eureka-server-g3.azurewebsites.net/eureka/
     registerWithEureka: false
     fetchRegistry: false
