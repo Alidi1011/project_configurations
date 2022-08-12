@@ -16,7 +16,7 @@ eureka:
     region: default
     registryFetchIntervalSeconds: 5
     serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: https://bootcamp-ms-eureka-server-g3.azurewebsites.net/eureka/
 owner:
   name: Diane
 
