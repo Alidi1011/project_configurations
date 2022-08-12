@@ -34,10 +34,10 @@ spring:
             - Path=/credits/**
 
         ## CREDIT CARDS SERVICE
-        - id: credit-cards-service
-          uri: lb://ms-credit-cards
+        - id: cards-service
+          uri: lb://ms-cards
           predicates:
-            - Path=/credit-cards/**
+            - Path=/cards/**
 
         ## TRANSACTIONS SERVICE
         - id: transaction-service

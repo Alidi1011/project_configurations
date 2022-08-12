@@ -1,11 +1,11 @@
 server:
-  port: 8084
+  port: 9084
 spring:
   application:
-    name: ms-cards
+    name: ms-credit-cards
   cloud:
     config:
-      name: ms-cards
+      name: ms-credit-cards
       discovery:
         enabled: true
         service-id: ms-config-server
