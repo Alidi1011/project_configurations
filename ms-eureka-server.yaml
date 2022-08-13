@@ -1,5 +1,3 @@
-server:
-  port: 443
 spring:
   application:
     name: ms-eureka-server
@@ -11,8 +9,11 @@ eureka:
   renewalPercenThreshold: 0.85
   instance:
     hostname: bootcamp-ms-eureka-server-g3.azurewebsites.net
+    secure-port-enabled: true
+    nonsecure-port-enabled: false
   client:
     serviceUrl:
       defaultZone: https://bootcamp-ms-eureka-server-g3.azurewebsites.net:443/eureka
     registerWithEureka: false
     fetchRegistry: false
+management.server.port= 888
