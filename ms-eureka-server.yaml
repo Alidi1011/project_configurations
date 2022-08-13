@@ -13,6 +13,6 @@ eureka:
     hostname: bootcamp-ms-eureka-server-g3.azurewebsites.net
   client:
     serviceUrl:
-      defaultZone: https://bootcamp-ms-eureka-server-g3.azurewebsites.net/eureka/
+      defaultZone: https://bootcamp-ms-eureka-server-g3.azurewebsites.net:443/eureka
     registerWithEureka: false
     fetchRegistry: false
